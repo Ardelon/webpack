@@ -1,0 +1,31 @@
+# Webpack Konfigürasyon
+
+- [ ] webpack default derleme
+- [ ] webpack mode belirleme
+- [ ] webpack mode seçeneğini argümanla alma
+- [ ] webpack mode seçimine göre farklı klasörlere çıktı alma
+- [ ] webpack birden fazla entry noktasından tek çıktı alma
+- [ ] webpack çıktısının adını belirleme
+- [ ] webpack birden fazla entry noktasından birden fazla çıktı alma
+- [ ] webpack çıktı isimlerini hash'leme
+- [ ] webpack ortak kütüphaneyi konfigürasyonda ekleme
+- [ ] webpack runtime belirleme
+- [ ] webpack dependOn kullanma
+- [ ] webpack çıktısını parçalara bölme
+- [ ] webpack çıktıdan console komutlarını temizleme
+- [ ] webpack çıktısını minimize etme
+- [ ] webpack CSS dosyası yükleme
+- [ ] webpack sass dosyası yükleme
+- [ ] webpack resim dosyası yükleme
+- [ ] webpack resim dosyalarını ayrı dosyalara aktarma
+- [ ] webpack çıktı alınacak klasörü temizleme
+- [ ] webpack HTML taslağı kullanma
+- [ ] webpack HTML taslağına parametre gönderme
+- [ ] webpack birden fazla HTML dosyası üretme
+- [ ] webpack dev server kullanma
+- [ ] webpack watch Files
+- [ ] webpack dev server hot reload
+- [ ] webpack dev server SSL
+- [ ] webpack dev server proxy
+- [ ] webpack dev server static serve
+- [ ] webpack cache
