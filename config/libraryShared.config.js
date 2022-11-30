@@ -8,6 +8,10 @@ module.exports = {
       import: './src/libraryIndex.js',
       dependOn: ['lodashVendor'],
     },
+    appTwo : {
+      import: './src/libraryTwoIndex.js',
+      dependOn: ['lodashVendor'],
+    }
   },
 	output: {
 		path: path.resolve(__dirname, '../' + 'build'),
