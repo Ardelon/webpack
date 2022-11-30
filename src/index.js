@@ -1,1 +1,4 @@
-console.log('This is ./src/index.js')
+
+(() => {
+	console.log('This is ./src/index.js');
+})();

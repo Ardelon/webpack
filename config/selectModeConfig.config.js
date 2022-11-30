@@ -1,6 +1,6 @@
 const path = require('path');
 
-console.log('Select Mode CLI Configuration');
+console.log('Select Mode Config Configuration');
 module.exports = {
 	entry: './src/index.js',
 	output: {

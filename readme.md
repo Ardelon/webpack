@@ -43,31 +43,32 @@ Bu adımlardan sonra webpack kullanıma hazır durumda olmalı. Tabi bu haliyle 
 - [x] [webpack birden fazla entry noktasından tek çıktı alma](#webpack-birden-fazla-entry-noktasından-tek-çıktı-alma)
 - [x] [webpack çıktısının adını belirleme](#webpack-çıktısının-adını-belirleme)
 - [x] [webpack birden fazla entry noktasından birden fazla çıktı alma](#webpack-birden-fazla-entry-noktasından-birden-fazla-çıktı-alma)
-- [x] webpack çıktı isimlerini hash'leme
-- [ ] webpack ortak kütüphaneyi konfigürasyonda ekleme
-- [ ] webpack runtime belirleme
-- [ ] webpack dependOn kullanma
-- [ ] webpack çıktısını parçalara bölme
-- [ ] webpack çıktıdan console komutlarını temizleme
-- [ ] webpack çıktısını minimize etme
-- [ ] webpack CSS dosyası yükleme
-- [ ] webpack sass dosyası yükleme
-- [ ] webpack resim dosyası yükleme
-- [ ] webpack resim dosyalarını ayrı dosyalara aktarma
-- [ ] webpack çıktı alınacak klasörü temizleme
-- [ ] webpack HTML taslağı kullanma
-- [ ] webpack HTML taslağına parametre gönderme
-- [ ] webpack birden fazla HTML dosyası üretme
-- [ ] webpack dev server kullanma
-- [ ] webpack watch Files
-- [ ] webpack dev server hot reload
-- [ ] webpack dev server SSL
-- [ ] webpack dev server proxy
-- [ ] webpack dev server static serve
-- [ ] webpack cache
+- [x] [webpack çıktı isimlerini hash'leme](#webpack-çıktı-isimlerini-hash'leme)
+- [ ] [webpack ortak kütüphaneyi konfigürasyonda ekleme](#webpack-ortak-kütüphaneyi-konfigürasyonda-ekleme)
+- [ ] [webpack runtime belirleme](#webpack-runtime-belirleme)
+- [ ] [webpack dependOn kullanma](#webpack-dependOn-kullanma)
+- [ ] [webpack çıktısını parçalara bölme](#webpack-çıktısını-parçalara-bölme)
+- [ ] [webpack çıktıdan console komutlarını temizleme](#webpack-çıktıdan-console-komutlarını-temizleme)
+- [ ] [webpack çıktısını minimize etme](#webpack-çıktısını-minimize-etme)
+- [ ] [webpack CSS dosyası yükleme](#webpack-CSS-dosyası-yükleme)
+- [ ] [webpack sass dosyası yükleme](#webpack-sass-dosyası-yükleme)
+- [ ] [webpack resim dosyası yükleme](#webpack-resim-dosyası-yükleme)
+- [ ] [webpack resim dosyalarını ayrı dosyalara aktarma](#webpack-resim-dosyalarını-ayrı-dosyalara-aktarma)
+- [ ] [webpack çıktı alınacak klasörü temizleme](#webpack-çıktı-alınacak-klasörü-temizleme)
+- [ ] [webpack HTML taslağı kullanma](#webpack-HTML-taslağı-kullanma)
+- [ ] [webpack HTML taslağına parametre gönderme](#webpack-HTML-taslağına-parametre-gönderme)
+- [ ] [webpack birden fazla HTML dosyası üretme](#webpack-birden-fazla-HTML-dosyası-üretme)
+- [ ] [webpack dev server kullanma](#webpack-dev-server-kullanma)
+- [ ] [webpack watch Files](#webpack-watch-Files)
+- [ ] [webpack dev server hot reload](#webpack-dev-server-hot-reload)
+- [ ] [webpack dev server SSL](#webpack-dev-server-SSL)
+- [ ] [webpack dev server proxy](#webpack-dev-server-proxy)
+- [ ] [webpack dev server static serve](#webpack-dev-server-static-serve)
+- [ ] [webpack cache](#webpack-cache)
 
 - Listeden çıkarılanlar
   - [ ] webpack mode seçeneğini argümanla alma
+
 ## Konfigürasyon Açıklamaları
 
 <br/>
@@ -256,11 +257,11 @@ npm run-script multipleEntryMultipleOutput
 
 <br/>
 
-###  webpack çıktı isimlerini hash'leme
+### webpack çıktı isimlerini hash'leme
 
 - [Config File](./config/hashOutput.config.js);
 
-Konfigürasyonda `output` özelliğinin filename özelliğine '[hash]' ekleyerek dosyaları hash'lemek mümkündür. Dosyalarda bir değişiklik olursa farklı hash üreteceği için tarayıcıda dosyanın güncellenmemesi durumu oluşmayacaktır. Derlediğiniz dosyada değişiklik yapıp tekrar derlerseniz farklı bir dosyanın üretildiğini görebilirsiniz. 
+Konfigürasyonda `output` özelliğinin filename özelliğine '[hash]' ekleyerek dosyaları hash'lemek mümkündür. Dosyalarda bir değişiklik olursa farklı hash üreteceği için tarayıcıda dosyanın güncellenmemesi durumu oluşmayacaktır. Derlediğiniz dosyada değişiklik yapıp tekrar derlerseniz farklı bir dosyanın üretildiğini görebilirsiniz.
 
 `package.json`
 
@@ -275,6 +276,148 @@ Konfigürasyonda `output` özelliğinin filename özelliğine '[hash]' ekleyerek
 ```
 npm run-script hashOutput
 ```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack ortak kütüphaneyi konfigürasyonda ekleme
+
+- [Config File](./config/libraryDepend.config.js);
+
+`package.json`
+
+```
+"scripts": {
+  "libraryDepend": "webpack -c config/libraryDepend.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script libraryDepend
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack runtime belirleme
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack dependOn kullanma
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack çıktısını parçalara bölme
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack çıktıdan console komutlarını temizleme
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack çıktısını minimize etme
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack CSS dosyası yükleme
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack sass dosyası yükleme
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack resim dosyası yükleme
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack resim dosyalarını ayrı dosyalara aktarma
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack çıktı alınacak klasörü temizleme
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack HTML taslağı kullanma
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack HTML taslağına parametre gönderme
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack birden fazla HTML dosyası üretme
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack dev server kullanma
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack watch Files
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack dev server hot reload
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack dev server SSL
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack dev server proxy
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack dev server static serve
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack cache
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
 
