@@ -4,7 +4,14 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"defaultConfig": "webpack -c webpack.config.js"
+		"selectConfigFile": "webpack -c config/selectConfigFile.config.js",
+		"selectModeCLI": "webpack --mode=development -c config/selectModeCLI.config.js",
+		"selectModeConfig": "webpack -c config/selectModeConfig.config.js",
+		"diffOutputWithArg": "webpack --mode=development -c config/diffOutputWithArg.config.js",
+		"multipleEntryOneOutput": "webpack -c config/multipleEntryOneOutput.config.js",
+		"selectOutputName": "webpack -c config/selectOutputName.config.js",
+		"multipleEntryMultipleOutput": "webpack -c config/multipleEntryMultipleOutput.config.js",
+		"hashOutput": "webpack -c config/hashOutput.config.js"
 	},
 	"keywords": [],
 	"author": "",
