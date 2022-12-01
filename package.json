@@ -14,7 +14,9 @@
 		"hashOutput": "webpack -c config/hashOutput.config.js",
 		"libraryDepend": "webpack -c config/libraryDepend.config.js",
 		"libraryShared": "webpack -c config/libraryShared.config.js",
-		"entryRuntime": "webpack -c config/entryRuntime.config.js"
+		"entryRuntime": "webpack -c config/entryRuntime.config.js",
+		"splitChunks": "webpack -c config/splitChunks.config.js",
+		"clearConsole": "webpack -c config/clearConsole.config.js"
 	},
 	"keywords": [],
 	"author": "",

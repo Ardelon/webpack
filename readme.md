@@ -47,7 +47,7 @@ Bu adımlardan sonra webpack kullanıma hazır durumda olmalı. Tabi bu haliyle 
 - [x] [webpack dependOn kullanma](#webpack-dependOn-kullanma)
 - [x] [webpack ortak kütüphaneyi konfigürasyonda ekleme](#webpack-ortak-kütüphaneyi-konfigürasyonda-ekleme)
 - [x] [webpack runtime belirleme](#webpack-runtime-belirleme)
-- [ ] [webpack çıktısını parçalara bölme](#webpack-çıktısını-parçalara-bölme)
+
 - [ ] [webpack çıktıdan console komutlarını temizleme](#webpack-çıktıdan-console-komutlarını-temizleme)
 - [ ] [webpack çıktısını minimize etme](#webpack-çıktısını-minimize-etme)
 - [ ] [webpack CSS dosyası yükleme](#webpack-CSS-dosyası-yükleme)
@@ -66,7 +66,9 @@ Bu adımlardan sonra webpack kullanıma hazır durumda olmalı. Tabi bu haliyle 
 - [ ] [webpack dev server static serve](#webpack-dev-server-static-serve)
 - [ ] [webpack cache](#webpack-cache)
 
+
 - Listeden çıkarılanlar
+	- [ ] [webpack çıktısını parçalara bölme](#webpack-çıktısını-parçalara-bölme)
   - [ ] webpack mode seçeneğini argümanla alma
 
 ## Konfigürasyon Açıklamaları
@@ -283,10 +285,10 @@ npm run-script hashOutput
 
 ### webpack dependOn kullanma
 
-
 - [Config File](./config/libraryDepend.config.js);
 
 HTML dosyasına sırasıyla ekleyerek kullanabiliriz.
+
 ```
   <script src="./lodashVendor.js"></script>
   <script src="./app.js"></script>
@@ -315,6 +317,7 @@ npm run-script libraryDepend
 - [Config File](./config/libraryShared.config.js);
 
 HTML dosyasına sırasıyla ekleyerek kullanabiliriz.
+
 ```
   <script src="./lodashVendor.js"></script>
   <script src="./app.js"></script>
@@ -344,13 +347,12 @@ npm run-script libraryShared
 - [Config File](./config/entryRuntime.config.js);
 
 HTML dosyasına sırasıyla ekleyerek kullanabiliriz.
+
 ```
   <script src="./vendor.js"></script>
   <script src="./lodashVendor.js"></script>
   <script src="./app.js"></script>
 ```
-
-
 
 `package.json`
 
@@ -368,18 +370,29 @@ npm run-script entryRuntime
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
 
-
 <br/>
 
 
-
-### webpack çıktısını parçalara bölme
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
 
 ### webpack çıktıdan console komutlarını temizleme
+
+
+- [Config File](./config/clearConsole.config.js);
+
+`package.json`
+
+```
+"scripts": {
+	"clearConsole": "webpack -c config/clearConsole.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script clearConsole
+```
+
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
 
@@ -476,6 +489,31 @@ npm run-script entryRuntime
 <br/>
 
 ### webpack cache
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+
+### webpack çıktısını parçalara bölme
+
+
+- [Config File](./config/splitChunks.config.js);
+
+
+`package.json`
+
+```
+"scripts": {
+	"splitChunks": "webpack -c config/splitChunks.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script splitChunks
+```
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
 
