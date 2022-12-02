@@ -47,13 +47,15 @@ Bu adımlardan sonra webpack kullanıma hazır durumda olmalı. Tabi bu haliyle 
 - [x] [webpack dependOn kullanma](#webpack-dependOn-kullanma)
 - [x] [webpack ortak kütüphaneyi konfigürasyonda ekleme](#webpack-ortak-kütüphaneyi-konfigürasyonda-ekleme)
 - [x] [webpack runtime belirleme](#webpack-runtime-belirleme)
-
-- [ ] [webpack çıktıdan console komutlarını temizleme](#webpack-çıktıdan-console-komutlarını-temizleme)
+- [x] [webpack CSS dosyası yükleme](#webpack-CSS-dosyası-yükleme)
+- [x] [webpack sass dosyası yükleme](#webpack-sass-dosyası-yükleme)
+- [x] [webpack resim dosyası yükleme](#webpack-resim-dosyası-yükleme)
+- [x] [webpack resim dosyalarını JavaScript çıktı dosyasında kullanma](#webpack-resim-dosyalarını-javascript-çıktı-dosyasında-kullanma)
+- [x] [webpack resim dosyalarını dışa aktarma](#webpack-resim-dosyalarını-dışa-aktarma)
+- [x] [webpack resim çıktısını klasöre aktarma](#webpack-resim-çıktısını-klasöre-aktarma)
+- [ ] [webpack resim dosyalarını dosya tipine göre farklı yerlere çıktı alma](#webpack-resim-dosyalarını-dosya-tipine-göre-farklı-yerlere-çıktı-alma)
 - [ ] [webpack çıktısını minimize etme](#webpack-çıktısını-minimize-etme)
-- [ ] [webpack CSS dosyası yükleme](#webpack-CSS-dosyası-yükleme)
-- [ ] [webpack sass dosyası yükleme](#webpack-sass-dosyası-yükleme)
-- [ ] [webpack resim dosyası yükleme](#webpack-resim-dosyası-yükleme)
-- [ ] [webpack resim dosyalarını ayrı dosyalara aktarma](#webpack-resim-dosyalarını-ayrı-dosyalara-aktarma)
+- [ ] [webpack çıktıdan console komutlarını temizleme](#webpack-çıktıdan-console-komutlarını-temizleme)
 - [ ] [webpack çıktı alınacak klasörü temizleme](#webpack-çıktı-alınacak-klasörü-temizleme)
 - [ ] [webpack HTML taslağı kullanma](#webpack-HTML-taslağı-kullanma)
 - [ ] [webpack HTML taslağına parametre gönderme](#webpack-HTML-taslağına-parametre-gönderme)
@@ -66,9 +68,8 @@ Bu adımlardan sonra webpack kullanıma hazır durumda olmalı. Tabi bu haliyle 
 - [ ] [webpack dev server static serve](#webpack-dev-server-static-serve)
 - [ ] [webpack cache](#webpack-cache)
 
-
 - Listeden çıkarılanlar
-	- [ ] [webpack çıktısını parçalara bölme](#webpack-çıktısını-parçalara-bölme)
+  - [ ] [webpack çıktısını parçalara bölme](#webpack-çıktısını-parçalara-bölme)
   - [ ] webpack mode seçeneğini argümanla alma
 
 ## Konfigürasyon Açıklamaları
@@ -372,10 +373,203 @@ npm run-script entryRuntime
 
 <br/>
 
+### webpack CSS dosyası yükleme
 
+- [Config File](./config/loadCSS.config.js);
+
+`terminal`
+
+```
+npm install --save-dev style-loader css-loader
+```
+
+package.json`
+
+```
+"scripts": {
+	"loadCSS": "webpack -c config/loadCSS.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script loadCSS
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack sass dosyası yükleme
+
+- [Config File](./config/loadSass.config.js);
+
+`terminal`
+
+```
+npm install --save-dev style-loader css-loader
+```
+
+package.json`
+
+```
+"scripts": {
+	"loadSass": "webpack -c config/loadSass.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script loadCSS
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack resim dosyası yükleme
+
+- [Config File](./config/loadFile.config.js);
+
+package.json`
+
+```
+"scripts": {
+	"loadFile": "webpack -c config/loadFile.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script loadFile
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack resim dosyalarını JavaScript çıktı dosyasında kullanma
+
+- [Config File](./config/loadFileInlineJS.config.js);
+
+`terminal`
+
+package.json`
+
+```
+"scripts": {
+	"loadFileInlineJS": "webpack -c config/loadFileInlineJS.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script loadFileInlineJS
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack resim dosyalarını dışa aktarma
+
+- [Config File](./config/loadFileResource.config.js);
+
+`terminal`
+
+package.json`
+
+```
+"scripts": {
+	"loadFileResource": "webpack -c config/loadFileResource.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script loadFileResource
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack resim çıktısını klasöre aktarma
+
+- [Config File](./config/exportedFilePath.config.js);
+
+`terminal`
+
+package.json`
+
+```
+"scripts": {
+	"exportedFilePath": "webpack -c config/exportedFilePath.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script exportedFilePath
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack resim dosyalarını dosya tipine göre farklı yerlere çıktı alma
+
+- [Config File](./config/exportDiffAssettoDiffPlace.config.js);
+
+`terminal`
+
+package.json`
+
+```
+"scripts": {
+	"exportedFilePath": "webpack -c config/exportDiffAssettoDiffPlace.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script exportDiffAssettoDiffPlace
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack çıktısını minimize etme
+
+- [Config File](./config/minimizeOutput.config.js);
+
+package.json`
+
+```
+"scripts": {
+	"minimizeOutput": "webpack -c config/minimizeOutput.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script minimizeOutput
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
 
 ### webpack çıktıdan console komutlarını temizleme
-
 
 - [Config File](./config/clearConsole.config.js);
 
@@ -392,37 +586,6 @@ npm run-script entryRuntime
 ```
 npm run-script clearConsole
 ```
-
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
-### webpack çıktısını minimize etme
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
-### webpack CSS dosyası yükleme
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
-### webpack sass dosyası yükleme
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
-### webpack resim dosyası yükleme
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
-### webpack resim dosyalarını ayrı dosyalara aktarma
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
 
@@ -494,12 +657,9 @@ npm run-script clearConsole
 
 <br/>
 
-
 ### webpack çıktısını parçalara bölme
 
-
 - [Config File](./config/splitChunks.config.js);
-
 
 `package.json`
 

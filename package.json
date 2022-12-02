@@ -16,12 +16,27 @@
 		"libraryShared": "webpack -c config/libraryShared.config.js",
 		"entryRuntime": "webpack -c config/entryRuntime.config.js",
 		"splitChunks": "webpack -c config/splitChunks.config.js",
-		"clearConsole": "webpack -c config/clearConsole.config.js"
+		"clearConsole": "webpack -c config/clearConsole.config.js",
+		"minimizeOutput": "webpack -c config/minimizeOutput.config.js",
+		"loadCSS": "webpack -c config/loadCSS.config.js",
+		"loadSass": "webpack -c config/loadSass.config.js",
+		"loadFile": "webpack -c config/loadFile.config.js",
+		"loadFileInlineJS": "webpack -c config/loadFileInlineJS.config.js",
+		"loadFileResource": "webpack -c config/loadFileResource.config.js",
+		"exportedFilePath": "webpack -c config/exportedFilePath.config.js",
+		"exportDiffAssettoDiffPlace": "webpack -c config/exportDiffAssettoDiffPlace.config.js"
 	},
+	
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"css-loader": "^6.7.2",
+		"file-loader": "^6.2.0",
+		"sass": "^1.56.1",
+		"sass-loader": "^13.2.0",
+		"style-loader": "^3.3.1",
+		"terser-webpack-plugin": "^5.3.6",
 		"webpack": "^5.75.0",
 		"webpack-cli": "^5.0.0"
 	},
