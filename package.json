@@ -30,7 +30,12 @@
 		"webpackDevServerSSL": "webpack serve -c config/webpackDevServerSSL.config.js",
 		"webpackDevServerHeaders": "webpack serve -c config/webpackDevServerHeaders.config.js",
 		"webpackDevServerCompress": "webpack serve -c config/webpackDevServerCompress.config.js",
-		"webpackDevServerOpenPage": "webpack serve -c config/webpackDevServerOpenPage.config.js"
+		"webpackDevServerOpenPage": "webpack serve -c config/webpackDevServerOpenPage.config.js",
+		"HTMLWebpackPluginSetup": "webpack -c config/HTMLWebpackPluginSetup.config.js",
+		"HTMLWebpackPluginTemplate": "webpack -c config/HTMLWebpackPluginTemplate.config.js",
+		"HTMLWebpackPluginMultipleFileCreation": "webpack -c config/HTMLWebpackPluginMultipleFileCreation.config.js",
+		"HTMLWebpackPluginOptionParameters": "webpack -c config/HTMLWebpackPluginOptionParameters.config.js",
+		"HTMLWebpackPluginAdditionalParameters": "webpack -c config/HTMLWebpackPluginAdditionalParameters.config.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -38,6 +43,7 @@
 	"devDependencies": {
 		"css-loader": "^6.7.2",
 		"file-loader": "^6.2.0",
+		"html-webpack-plugin": "^5.5.0",
 		"sass": "^1.56.1",
 		"sass-loader": "^13.2.0",
 		"style-loader": "^3.3.1",

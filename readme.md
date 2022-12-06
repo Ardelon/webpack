@@ -60,17 +60,19 @@ Bu adımlardan sonra webpack kullanıma hazır durumda olmalı. Tabi bu haliyle 
 - [x] [webpack dev server Headers](#webpack-dev-server-Headers)
 - [x] [webpack dev server Compress](#webpack-dev-server-Compress)
 - [x] [webpack dev server Servis Edilen Dosyayı Açma](#webpack-dev-server-servis-edilen-dosyayı-açma)
+- [x] [HTML Webpack Plugin Kurma](#HTML-Webpack-Plugin-Kurma)
+- [x] [webpack HTML taslağı kullanma](#webpack-HTML-taslağı-kullanma)
+- [x] [webpack birden fazla HTML dosyası üretme](#webpack-birden-fazla-HTML-dosyası-üretme)
+- [x] [webpack HTML taslağına plugin parametreleri gönderme](#webpack-HTML-taslağına-plugin-parametreleri-gönderme)
+- [x] [webpack HTML taslağına harici parametre gönderme](#webpack-HTML-taslağına-harici-parametre-gönderme)
 - [ ] [webpack çıktısını minimize etme](#webpack-çıktısını-minimize-etme)
 - [ ] [webpack çıktıdan console komutlarını temizleme](#webpack-çıktıdan-console-komutlarını-temizleme)
-- [ ] [webpack HTML taslağı kullanma](#webpack-HTML-taslağı-kullanma)
-- [ ] [webpack HTML taslağına parametre gönderme](#webpack-HTML-taslağına-parametre-gönderme)
-- [ ] [webpack birden fazla HTML dosyası üretme](#webpack-birden-fazla-HTML-dosyası-üretme)
 - [ ] [webpack watch Files](#webpack-watch-Files)
 - [ ] [webpack cache](#webpack-cache)
 
 - Listeden çıkarılanlar
   - [ ] [webpack çıktısını parçalara bölme](#webpack-çıktısını-parçalara-bölme)
-	- [ ] [webpack dev server proxy](#webpack-dev-server-proxy)
+  - [ ] [webpack dev server proxy](#webpack-dev-server-proxy)
   - [ ] webpack mode seçeneğini argümanla alma
 
 ## Konfigürasyon Açıklamaları
@@ -635,6 +637,7 @@ npm run-script webpackDevServerSSL
 ```
 npm run-script webpackDevServerHeaders
 ```
+
 [link](https://webpack.js.org/configuration/dev-server/#devserverheaders)
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
@@ -658,6 +661,7 @@ npm run-script webpackDevServerHeaders
 ```
 npm run-script webpackDevServerCompress
 ```
+
 [link](https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/)
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
@@ -681,7 +685,126 @@ npm run-script webpackDevServerCompress
 ```
 npm run-script webpackDevServerOpenPage
 ```
+
 [link](https://webpack.js.org/configuration/dev-server/#devserveropen)
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### HTML Webpack Plugin Kurma
+
+- [Config File](./config/HTMLWebpackPluginSetup.config.js);
+
+`terminal`
+
+```
+npm i html-webpack-plugin --save-dev
+```
+
+`package.json`
+
+```
+"scripts": {
+	"HTMLWebpackPluginSetup": "webpack -c config/HTMLWebpackPluginSetup.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script HTMLWebpackPluginSetup
+```
+
+[link](https://webpack.js.org/plugins/html-webpack-plugin/)
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack HTML taslağı kullanma
+
+- [Config File](./config/HTMLWebpackPluginTemplate.config.js);
+
+`package.json`
+
+```
+"scripts": {
+	"HTMLWebpackPluginTemplate": "webpack -c config/HTMLWebpackPluginTemplate.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script HTMLWebpackPluginTemplate
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack birden fazla HTML dosyası üretme
+
+- [Config File](./config/HTMLWebpackPluginMultipleFileCreation.config.js);
+
+`package.json`
+
+```
+"scripts": {
+	"HTMLWebpackPluginMultipleFileCreation": "webpack -c config/HTMLWebpackPluginMultipleFileCreation.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script HTMLWebpackPluginMultipleFileCreation
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack HTML taslağına plugin parametreleri gönderme
+
+- [Config File](./config/HTMLWebpackPluginOptionParameters.config.js);
+
+`package.json`
+
+```
+"scripts": {
+	"HTMLWebpackPluginOptionParameters": "webpack -c config/HTMLWebpackPluginOptionParameters.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script HTMLWebpackPluginOptionParameters
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack HTML taslağına harici parametre gönderme
+
+- [Config File](./config/HTMLWebpackPluginAdditionalParameters.config.js);
+
+`package.json`
+
+```
+"scripts": {
+	"HTMLWebpackPluginAdditionalParameters": "webpack -c config/HTMLWebpackPluginAdditionalParameters.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script HTMLWebpackPluginAdditionalParameters
+```
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
 
@@ -726,24 +849,6 @@ npm run-script minimizeOutput
 ```
 npm run-script clearConsole
 ```
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
-### webpack HTML taslağı kullanma
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
-### webpack HTML taslağına parametre gönderme
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
-### webpack birden fazla HTML dosyası üretme
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
 
