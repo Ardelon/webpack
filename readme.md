@@ -53,23 +53,24 @@ Bu adımlardan sonra webpack kullanıma hazır durumda olmalı. Tabi bu haliyle 
 - [x] [webpack resim dosyalarını JavaScript çıktı dosyasında kullanma](#webpack-resim-dosyalarını-javascript-çıktı-dosyasında-kullanma)
 - [x] [webpack resim dosyalarını dışa aktarma](#webpack-resim-dosyalarını-dışa-aktarma)
 - [x] [webpack resim çıktısını klasöre aktarma](#webpack-resim-çıktısını-klasöre-aktarma)
-- [ ] [webpack resim dosyalarını dosya tipine göre farklı yerlere çıktı alma](#webpack-resim-dosyalarını-dosya-tipine-göre-farklı-yerlere-çıktı-alma)
+- [x] [webpack resim dosyalarını dosya tipine göre farklı yerlere çıktı alma](#webpack-resim-dosyalarını-dosya-tipine-göre-farklı-yerlere-çıktı-alma)
+- [x] [webpack çıktı alınacak klasörü temizleme](#webpack-çıktı-alınacak-klasörü-temizleme)
+- [x] [webpack dev server kurma](#webpack-dev-server-kurma)
+- [x] [webpack dev server SSL](#webpack-dev-server-SSL)
+- [x] [webpack dev server Headers](#webpack-dev-server-Headers)
+- [x] [webpack dev server Compress](#webpack-dev-server-Compress)
+- [x] [webpack dev server Servis Edilen Dosyayı Açma](#webpack-dev-server-servis-edilen-dosyayı-açma)
 - [ ] [webpack çıktısını minimize etme](#webpack-çıktısını-minimize-etme)
 - [ ] [webpack çıktıdan console komutlarını temizleme](#webpack-çıktıdan-console-komutlarını-temizleme)
-- [ ] [webpack çıktı alınacak klasörü temizleme](#webpack-çıktı-alınacak-klasörü-temizleme)
 - [ ] [webpack HTML taslağı kullanma](#webpack-HTML-taslağı-kullanma)
 - [ ] [webpack HTML taslağına parametre gönderme](#webpack-HTML-taslağına-parametre-gönderme)
 - [ ] [webpack birden fazla HTML dosyası üretme](#webpack-birden-fazla-HTML-dosyası-üretme)
-- [ ] [webpack dev server kullanma](#webpack-dev-server-kullanma)
 - [ ] [webpack watch Files](#webpack-watch-Files)
-- [ ] [webpack dev server hot reload](#webpack-dev-server-hot-reload)
-- [ ] [webpack dev server SSL](#webpack-dev-server-SSL)
-- [ ] [webpack dev server proxy](#webpack-dev-server-proxy)
-- [ ] [webpack dev server static serve](#webpack-dev-server-static-serve)
 - [ ] [webpack cache](#webpack-cache)
 
 - Listeden çıkarılanlar
   - [ ] [webpack çıktısını parçalara bölme](#webpack-çıktısını-parçalara-bölme)
+	- [ ] [webpack dev server proxy](#webpack-dev-server-proxy)
   - [ ] webpack mode seçeneğini argümanla alma
 
 ## Konfigürasyon Açıklamaları
@@ -383,7 +384,7 @@ npm run-script entryRuntime
 npm install --save-dev style-loader css-loader
 ```
 
-package.json`
+`package.json`
 
 ```
 "scripts": {
@@ -411,7 +412,7 @@ npm run-script loadCSS
 npm install --save-dev style-loader css-loader
 ```
 
-package.json`
+`package.json`
 
 ```
 "scripts": {
@@ -433,7 +434,7 @@ npm run-script loadCSS
 
 - [Config File](./config/loadFile.config.js);
 
-package.json`
+`package.json`
 
 ```
 "scripts": {
@@ -455,9 +456,7 @@ npm run-script loadFile
 
 - [Config File](./config/loadFileInlineJS.config.js);
 
-`terminal`
-
-package.json`
+`package.json`
 
 ```
 "scripts": {
@@ -479,9 +478,7 @@ npm run-script loadFileInlineJS
 
 - [Config File](./config/loadFileResource.config.js);
 
-`terminal`
-
-package.json`
+`package.json`
 
 ```
 "scripts": {
@@ -505,7 +502,7 @@ npm run-script loadFileResource
 
 `terminal`
 
-package.json`
+`package.json`
 
 ```
 "scripts": {
@@ -529,7 +526,7 @@ npm run-script exportedFilePath
 
 `terminal`
 
-package.json`
+`package.json`
 
 ```
 "scripts": {
@@ -542,6 +539,149 @@ package.json`
 ```
 npm run-script exportDiffAssettoDiffPlace
 ```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack çıktı alınacak klasörü temizleme
+
+- [Config File](./config/cleanOutput.config.js);
+
+`terminal`
+
+`package.json`
+
+```
+"scripts": {
+	"cleanOutput": "webpack -c config/cleanOutput.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script cleanOutput
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack dev server kurma
+
+- [Config File](./config/setupWebpackDevServer.config.js);
+
+`terminal`
+
+```
+npm i webpack-dev-server --save-dev
+```
+
+`package.json`
+
+```
+"scripts": {
+	"setupWebpackDevServer": "webpack serve -c config/setupWebpackDevServer.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script setupWebpackDevServer
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack dev server SSL
+
+- [Config File](./config/webpackDevServerSSL.config.js);
+
+`package.json`
+
+```
+"scripts": {
+	"webpackDevServerSSL": "webpack serve -c config/webpackDevServerSSL.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script webpackDevServerSSL
+```
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack dev server Headers
+
+- [Config File](./config/webpackDevServerHeaders.config.js);
+
+`package.json`
+
+```
+"scripts": {
+	"webpackDevServerHeaders": "webpack serve -c config/webpackDevServerHeaders.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script webpackDevServerHeaders
+```
+[link](https://webpack.js.org/configuration/dev-server/#devserverheaders)
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack dev server Compress
+
+- [Config File](./config/webpackDevServerCompress.config.js);
+
+`package.json`
+
+```
+"scripts": {
+	"webpackDevServerCompress": "webpack serve -c config/webpackDevServerCompress.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script webpackDevServerCompress
+```
+[link](https://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/)
+
+[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
+
+<br/>
+
+### webpack dev server Servis Edilen Dosyayı Açma
+
+- [Config File](./config/webpackDevServerOpenPage.config.js);
+
+`package.json`
+
+```
+"scripts": {
+	"webpackDevServerOpenPage": "webpack serve -c config/webpackDevServerOpenPage.config.js"
+},
+```
+
+`terminal`
+
+```
+npm run-script webpackDevServerOpenPage
+```
+[link](https://webpack.js.org/configuration/dev-server/#devserveropen)
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
 
@@ -591,12 +731,6 @@ npm run-script clearConsole
 
 <br/>
 
-### webpack çıktı alınacak klasörü temizleme
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
 ### webpack HTML taslağı kullanma
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
@@ -615,12 +749,6 @@ npm run-script clearConsole
 
 <br/>
 
-### webpack dev server kullanma
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
 ### webpack watch Files
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
@@ -633,19 +761,7 @@ npm run-script clearConsole
 
 <br/>
 
-### webpack dev server SSL
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
 ### webpack dev server proxy
-
-[Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
-
-<br/>
-
-### webpack dev server static serve
 
 [Konfigürasyon Listesine Geri Dön](#konfigürasyon-listesi)
 

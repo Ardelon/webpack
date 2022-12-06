@@ -24,9 +24,14 @@
 		"loadFileInlineJS": "webpack -c config/loadFileInlineJS.config.js",
 		"loadFileResource": "webpack -c config/loadFileResource.config.js",
 		"exportedFilePath": "webpack -c config/exportedFilePath.config.js",
-		"exportDiffAssettoDiffPlace": "webpack -c config/exportDiffAssettoDiffPlace.config.js"
+		"exportDiffAssettoDiffPlace": "webpack -c config/exportDiffAssettoDiffPlace.config.js",
+		"cleanOutput": "webpack -c config/cleanOutput.config.js",
+		"setupWebpackDevServer": "webpack serve -c config/setupWebpackDevServer.config.js",
+		"webpackDevServerSSL": "webpack serve -c config/webpackDevServerSSL.config.js",
+		"webpackDevServerHeaders": "webpack serve -c config/webpackDevServerHeaders.config.js",
+		"webpackDevServerCompress": "webpack serve -c config/webpackDevServerCompress.config.js",
+		"webpackDevServerOpenPage": "webpack serve -c config/webpackDevServerOpenPage.config.js"
 	},
-	
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
@@ -38,7 +43,8 @@
 		"style-loader": "^3.3.1",
 		"terser-webpack-plugin": "^5.3.6",
 		"webpack": "^5.75.0",
-		"webpack-cli": "^5.0.0"
+		"webpack-cli": "^5.0.0",
+		"webpack-dev-server": "^4.11.1"
 	},
 	"dependencies": {
 		"lodash": "^4.17.21"
