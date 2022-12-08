@@ -2,9 +2,9 @@ const path = require('path');
 
 console.log('Select Output Name Configuration');
 module.exports = {
-	entry: './src/index.js',
+	entry: './src/selectOutputName.js',
 	output: {
 		path: path.resolve(__dirname, '../' + 'build'),
-		filename: 'selectedOutputName.js',
+		filename: 'selectedOutputName(but different).js',
 	},
 };

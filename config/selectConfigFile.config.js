@@ -2,9 +2,9 @@ const path = require('path');
 
 console.log('Select Config File Configuration');
 module.exports = {
-	entry: './src/index.js',
+	entry: './src/selectConfigFile.js',
 	output: {
 		path: path.resolve(__dirname, '../' + 'build'),
-		filename: 'main.js',
+		filename: 'selectConfigFile.js',
 	},
 };

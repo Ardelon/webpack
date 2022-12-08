@@ -1,0 +1,1 @@
+(()=>{const e=document.createElement("h1");e.innerText="This is ./src/selectOutputName.js",console.log("This is ./src/selectOutputName.js"),document.body.append(e),console.log("selectOutputName")})();
