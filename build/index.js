@@ -1,1 +1,0 @@
-(()=>{const e=document.createElement("h1");e.innerText="This is ./src/index.js",console.log("This is ./src/index.js"),document.body.append(e),console.log("selam")})();

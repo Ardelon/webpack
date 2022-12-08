@@ -2,9 +2,9 @@ const path = require('path');
 
 console.log('Hash Output Configuration');
 module.exports = {
-	entry: './src/index.js',
+	entry: './src/hashOutput.js',
 	output: {
 		path: path.resolve(__dirname, '../' + 'build'),
-		filename: 'main[hash].js',
+		filename: 'hashOutput[hash].js',
 	},
 };

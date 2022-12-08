@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebpack_tutorial=self.webpackChunkwebpack_tutorial||[]).push([[496],{290:(e,s,n)=>{var o=n(486),c=n.n(o);(()=>{const e=document.createElement("h1");e.innerText="This is ./src/libraryDepend.js",console.log("This is ./src/libraryDepend.js"),document.body.append(e),console.log("libraryDepend"),console.log(c())})()}},e=>{e(e.s=290)}]);

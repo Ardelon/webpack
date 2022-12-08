@@ -4,8 +4,8 @@ console.log('Library Depend Configuration');
 module.exports = {
   entry: {
     lodashVendor: { import: ['lodash'] },
-    app: {
-      import: './src/libraryIndex.js',
+    libraryDepend: {
+      import: './src/libraryDepend.js',
       dependOn: ['lodashVendor'],
     },
   },
